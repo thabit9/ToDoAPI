@@ -46,7 +46,7 @@ namespace TodoAPI.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutTodoItem(long id, TodoItem todoItem)
+        public async Task<ActionResult<TodoItem>> UpdateTodoItem(long id, TodoItem todoItem)
         {
             if (id != todoItem.Id)
             {
